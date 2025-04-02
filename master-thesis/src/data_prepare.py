@@ -8,7 +8,7 @@ less counts, are not considered in this dataset.
 """
 
 #loading the level4, go data and extract thse labels having between 1k t 10k counts.
-os.chdir("/fs/pool/pool-schwille-user/Frohn_Bela/Seraj-Kiana/ProteinEvolution/ProteinEvolver/thesis/go_label")
+os.chdir("/PATH/to/go_label")
 with open("go_level4_label.txt") as f:
   go_data = f.read()
   
