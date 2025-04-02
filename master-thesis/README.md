@@ -1,10 +1,10 @@
-# Optimization of Deep Learning-Based Protein Sequence Representations 
+# Optimizing Learned Representations from Protein Language Models
 
 Proteins are fundamental macromolecules central to cellular structure, function, and regulation across all living organisms. Given their diverse roles, accurate functional annotation is essential for biomedical research, disease characterization, and drug development. However, wet-lab approaches for annotating protein functions require significant time and resources. Recent advances in computational biology, particularly the use of large pretrained protein language models (PLMs), have enhanced protein function and structure prediction via transfer learning, repurposing learned representations for downstream tasks.
 The representations derived from PLMs are high-dimensional vectors that, for some subsequent training tasks, require dimensionality reduction. Common strategies such as mean and max pooling are widely used for dimensionality reduction, though their effectiveness remains empirically driven and theoretically underexplored. This thesis investigates multiple strategies for compactly representing protein sequence embeddings derived from pretrained language models and evaluates their effectiveness in the downstream task of Gene Ontology (GO) function prediction, formulated as a multi-label classification problem.
 Experimental results confirm that PLM-based representations enhance GO prediction performance, even when only 60\% of the feature vector is retained—highlighting the robustness and redundancy of contextualized embeddings in Transformer-based models.The study finds that mean pooling consistently outperforms max pooling as a fixed aggregation strategy for protein sequence embeddings. However, when learnable dimensionality reduction layers are incorporated into the downstream architecture, the model adapts its representations through task-specific fine-tuning—resulting in comparable performance across both pooling methods. Interestingly, representations from newer PLM architectures do not consistently outperform earlier models; in some cases, lower-level embeddings yield better generalization. This observation suggests that further refinement of pretraining objectives may be needed to align model representations with functional annotation tasks.
 
-# Workflow Steps
+### Workflow Steps
 
 <br>
 
