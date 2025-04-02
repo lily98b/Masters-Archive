@@ -4,8 +4,8 @@ from tqdm import tqdm
 from Bio.PDB import *
 from Bio import PDB
 
-pdb_dir = "/fs/pool/pool-schwille-user/Frohn_Bela/Seraj-Kiana/ProteinEvolution/ProteinEvolver/thesis/ec_model/CLEAN/app/data/AF_clean" 
-seq_dir = "/fs/pool/pool-schwille-user/Frohn_Bela/Seraj-Kiana/ProteinEvolution/ProteinEvolver/thesis/ec_model/CLEAN/app/data/embedding_30_new/sequence" 
+pdb_dir = "/PATH/to/AF_clean" 
+seq_dir = "/PATH/to/sequence" 
 
 
 #extracting contact map info of Ca-Ca atoms 
@@ -40,9 +40,9 @@ for file in tqdm(os.listdir(pdb_dir)):
          contact_map[j][i] = 1 
    if seq_len != len(contact_map[0]):
      var_len.append(id)
-   np.save(f"/fs/pool/pool-schwille-user/Frohn_Bela/Seraj-Kiana/ProteinEvolution/ProteinEvolver/thesis/ec_model/CLEAN/app/data/contact_map/{id}", contact_map)
+   np.save(f"/PATH/to/contact_map/{id}", contact_map)
   except Exception as e:
       print(e, id)
       continue
-np.save("/fs/pool/pool-schwille-user/Frohn_Bela/Seraj-Kiana/ProteinEvolution/ProteinEvolver/thesis/ec_model/CLEAN/app/data/contact_map/differ/var", np.array(var_len))
+np.save("/PATH/to/var", np.array(var_len))
 
