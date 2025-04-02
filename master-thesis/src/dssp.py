@@ -8,8 +8,8 @@ from os import walk
 """extracting relative accessible surface area(ASA) of each residue using Bio.PDB.DSSP module"""
 
 
-pdb_dir = "/Users/kianaseraj/desktop/github-kianaseraj/master-thesis/clean_pdb/pdb_file" #pdb directory o extract ASA 
-out_dir = "/Users/kianaseraj/desktop/github-kianaseraj/master-thesis/dssp_clean" #directory to save the result"
+pdb_dir = "/PATH/to/pdb_file" #pdb directory o extract ASA 
+out_dir = "/PATH/to/dssp_clean" #directory to save the result"
 
 
 
@@ -28,7 +28,7 @@ for file in tqdm(os.listdir(pdb_dir)):
   
   try:
     id = os.path.splitext(file)[0]
-    structure = p.get_structure(f"{id}", f"/Users/kianaseraj/desktop/github-kianaseraj/master-thesis/clean_pdb/pdb_file/{file}")
+    structure = p.get_structure(f"{id}", f"/PATH/to/pdb_file/{file}")
     model = structure[0]
     dssp = DSSP(model, f"{file}", dssp = "mkdssp")
 
