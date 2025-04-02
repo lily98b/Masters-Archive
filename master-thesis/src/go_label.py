@@ -11,7 +11,7 @@ from goatools.obo_parser import GODag
 Each protein's GO will be classified into 3 groups of [2,4,6] levels of gene ontology hierarchy and this happens only for molecular function!
 """
 
-filepath = "/fs/pool/pool-schwille-user/Frohn_Bela/Seraj-Kiana/ProteinEvolution/ProteinEvolver/thesis/dataset/go/raw/files"
+filepath = "/PATH/to/files"
 for (dirpath, dirnames, filenames) in walk(filepath):
   break
 
@@ -19,7 +19,7 @@ for (dirpath, dirnames, filenames) in walk(filepath):
 json_filenames = [filename for filename in filenames if filename.endswith(".json")]
 
 # loading the go basic file containing the basic GO terms and structure
-obodag = GODag("/fs/pool/pool-schwille-user/Frohn_Bela/Seraj-Kiana/ProteinEvolution/ProteinEvolver/thesis/go-basic.obo")
+obodag = GODag("/PATH/to/go-basic.obo")
 
 #31157/31813 is done
 not_found = {}
@@ -42,5 +42,5 @@ for file in tqdm(json_filenames):
            level_.append(id_)
         except Exception as e:
          not_found[f"{id}"] = i['id']
-  np.save(f"/fs/pool/pool-schwille-user/Frohn_Bela/Seraj-Kiana/ProteinEvolution/ProteinEvolver/thesis/dataset/go/go_level/{id}", np.array(level_))
+  np.save(f"/PATH/to/go_level/{id}", np.array(level_))
 
