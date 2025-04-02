@@ -7,10 +7,10 @@ import re
 import os
 
 
-model_dir = "/fs/pool/pool-schwille-user/Frohn_Bela/Seraj-Kiana/ProteinEvolution/ProteinEvolver/thesis/ProstT5_model/ProstT5"
-tokenizer_dir = "/fs/pool/pool-schwille-user/Frohn_Bela/Seraj-Kiana/ProteinEvolution/ProteinEvolver/thesis/ProstT5_model/ProstT5_tokenizer"
-seq_dir = "/fs/pool/pool-schwille-user/Frohn_Bela/Seraj-Kiana/ProteinEvolution/ProteinEvolver/thesis/go_cd_hit/seq_0.5"
-emb_save = "/fs/pool/pool-schwille-user/Frohn_Bela/Seraj-Kiana/ProteinEvolution/ProteinEvolver/thesis/embeddings/go/prost_embed"
+model_dir = "/PATH/to/ProstT5_model/ProstT5"
+tokenizer_dir = "/PATH/to/ProstT5_model/ProstT5_tokenizer"
+seq_dir = "/PATH/to/go_cd_hit/seq_0.5"
+emb_save = "/PATH/to/prost_embed"
 
 
 """getting embedding representation with ProstT5 model"""
