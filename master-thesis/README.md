@@ -11,17 +11,19 @@ Recent advances in **Protein Language Models (PLMs)** enable functional predicti
 This project investigates **dimensionality reduction strategies** for pretrained protein embeddings in the downstream task of **Gene Ontology (GO) function prediction**.
 
 ### Key Questions
-- How does **pooling method** (mean vs max) impact performance?
-- Can we **compress embeddings** (e.g., down to 60%) without hurting accuracy?
-- Do **learnable reduction layers** improve generalization?
-- Do **newer PLMs** outperform older ones?
+- Understanding the patterns in vector representations obtained from PLMs
+- How do pooling methods perform?
+- Evaluating feature selections.
+- Can we shorten embeddings (e.g., down to 60%) without hurting accuracy?
+- Do learnable reduction layers keep the same performance?
+- Compare performance of various layers of PLMs.
 
 ### Key Findings
 
-- **Mean pooling** consistently outperforms max pooling
-- **60% of embedding size** retains strong GO prediction performance
-- **Learnable reduction layers** help adapt representations
-- Surprisingly, **newer PLMs don’t always outperform older ones** — generalization depends on architecture and pretraining
+- Mean pooling consistently outperforms max pooling
+- 60% of embedding size retains strong GO prediction performance
+- Learnable reduction layers help adapt representations
+- The representations from the deeper layers of PLM seemed to have similar performancee to the earlier layers indicating the lack of generalization improvement.
 
 ### Research Impact
 
@@ -29,14 +31,6 @@ Our work highlights the **robustness and redundancy** in protein embeddings and 
 
 
 ### Workflow Steps
-
-<br>
-
-<p align="center">
-  <img src="Architecture.jpg" width="400" height="200">
-</p>
-
-
 
 1. Input Sequence Preparation
 Description: Prepare the protein sequences to be processed by the PLMs.
@@ -79,3 +73,15 @@ Description: Assess the model's performance and summarize results.
 Steps:
 Generate evaluation metrics for the test set.
 Compare performance across different feature selection and pooling strategies.
+
+ **Pipeline Flow**:  
+ 
+`FASTA → Tokenizer → PLM → Feature Selection → Pooling → Classifier`
+
+### Acknowledgements
+
+This project was inspired in part by the work presented in the preprint:  
+**[How to Extract Useful Features from Protein Language Models?](https://www.biorxiv.org/content/biorxiv/early/2024/02/14/2024.02.05.578959.full.pdf)**  
+*(bioRxiv, 2024)*  
+The insights from this paper helped shape the experimental design and evaluation focus of this thesis.
+
