@@ -17,16 +17,10 @@ This project investigates **dimensionality reduction strategies** for pretrained
 - Do learnable reduction layers maintain performance levels?
 - How do various layers of PLMs perform comparatively?
 
-### Key Findings
-
-- Mean pooling consistently outperforms max pooling.
-- Reducing the embedding size by 60% still retains strong GO prediction performance.
-- Learnable reduction layers help adapt representations to the task.
-- Representations from deeper layers of PLMs performed similarly to earlier layers, indicating a lack of generalization improvement.
 
 ### Research Impact
 
-Our work highlights the **robustness and redundancy** in protein embeddings and suggests that better **pretraining objectives**—not just model size—are key to downstream success.
+Our work highlights the robustness and redundancy in protein embeddings and suggests that better pretraining objectives—not just model size—are key to downstream success.
 
 ---
 
