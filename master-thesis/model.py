@@ -22,10 +22,11 @@ class GoClass(nn.Module):
 
         super(GoClass, self).__init__()
 
-
-        self.fc1 = nn.Linear(input_dim, 640)
-        self.fc2 = nn.Linear(640, 320)
-        self.out = nn.Linear(320, output_dim)
+        self.fc1 = nn.Linear(input_dim, 2048)
+        self.fc2 = nn.Linear(2048, 1024)
+        self.fc3 = nn.Linear(1024, 512)
+        self.fc4 = nn.Linear(512, 256)
+        self.out = nn.Linear(256, output_dim)
 
         self.dropout = nn.Dropout(dropout)
         self.relu = nn.LeakyReLU()
@@ -39,6 +40,12 @@ class GoClass(nn.Module):
         x = self.relu(x)
         x = self.dropout(x)
         x = self.fc2(x)
+        x = self.relu(x)
+        x = self.dropout(x)
+        x = self.fc3(data)
+        x = self.relu(x)
+        x = self.dropout(x)
+        x = self.fc4(data)
         x = self.relu(x)
         x = self.dropout(x)
         out = self.out(x)
