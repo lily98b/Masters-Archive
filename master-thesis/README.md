@@ -58,11 +58,3 @@ Our work highlights the robustness and redundancy in protein embeddings and sugg
 ➡️ **Pipeline Flow**:  
 `FASTA → Tokenizer → PLM → Feature Selection → Pooling → Classifier`
 
----
-
-### Acknowledgements
-
-This project was inspired in part by the work presented in the preprint:  
-**[Understanding Transfer Learning with Protein Language Models](https://www.biorxiv.org/content/biorxiv/early/2024/02/14/2024.02.05.578959.full.pdf)**  
-*(bioRxiv, 2024)*  
-The insights from this paper helped shape the experimental design and evaluation focus of this thesis.
